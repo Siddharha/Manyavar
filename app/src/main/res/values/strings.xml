@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Manyavar</string>
+    <string name="rsBtnEnter">Enter</string>
+    <string name="aboutTitle">This App Consists of Manyavar Store Products and its contents. presented by Vedant Fashions Private Limited
+        and devoloped by Bluehorse Software.P.Ltd</string>
+    <string name="store_id">Store ID</string>
+</resources>

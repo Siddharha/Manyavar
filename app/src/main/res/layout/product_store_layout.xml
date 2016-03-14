@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SplashActivity"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:background="#e4e4e4"
+        android:layout_weight="0">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Look Book"
+                android:id="@+id/tvTitle"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Please tap to see the Detailse"
+                android:id="@+id/textView2"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="1"
+                android:textColor="@color/mainColor" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imgFilter"
+                    android:src="@drawable/filter"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0"
+                    android:visibility="gone"
+                    android:onClick="clkFilter" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView9"
+                    android:src="@drawable/search"
+                    android:layout_margin="5dp"
+                    android:onClick="onClickSearch"
+                    android:layout_weight="0" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imageView11"
+                        android:src="@drawable/compareicon"
+                        android:scaleType="fitCenter" />
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imgCompNotify"
+                        android:src="@drawable/comp_products_shape"
+                        android:scaleType="fitCenter"
+                        android:onClick="onClickCompare"
+                        android:nestedScrollingEnabled="false"
+                        android:background="#00ffffff"
+                        android:padding="7dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="0"
+                        android:id="@+id/tvCompNumber"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textAlignment="gravity"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp" />
+
+                </FrameLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imgHome"
+                    android:src="@drawable/home_icon"
+                    android:layout_margin="5dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView"
+                    android:src="@drawable/feedback_icon"
+                    android:layout_margin="5dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView2"
+                    android:src="@drawable/like_icon"
+                    android:layout_margin="5dp"
+                    android:onClick="OnFbClick"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView3"
+                    android:src="@drawable/all_screen_logo"
+                    android:layout_margin="5dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/btnLeftArrow"
+                android:background="@drawable/arrow_left"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:onClick="l_arrowOnClick" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rvStoreItems"
+            android:layout_weight="0.14"
+            android:layout_gravity="center"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/btnRightArrow"
+                android:background="@drawable/arrow_right"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:onClick="r_arrowOnClick" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/bottom_panel_layout"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.4" />
+
+</LinearLayout>

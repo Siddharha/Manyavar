@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView10"
+            android:src="@mipmap/app_icon"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/tvVersion"
+            android:layout_gravity="center_horizontal"
+            android:textSize="25sp"
+            android:textColor="@color/mainColor" />
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/aboutTitle"
+            android:id="@+id/textView9"
+            android:layout_margin="10dp"
+            android:textAlignment="center"
+            android:textColor="#898989"
+            android:textSize="15sp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Avout Version"
+            android:id="@+id/txtAboutVersion"
+            android:textAlignment="center"
+            android:textColor="#0b5e00"
+            android:textSize="20sp"
+            android:layout_margin="20sp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/imgbDownload"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/update"
+                android:visibility="visible"
+                android:scaleType="center"
+                android:padding="5dp"
+                android:background="@drawable/button_shape"
+                android:layout_margin="10dp" />
+
+            <ImageButton
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/imgbASync"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/sync"
+                android:visibility="visible"
+                android:scaleType="fitCenter"
+                android:padding="5dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/button_shape" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/tvName"
+        android:layout_gravity="center"
+        android:background="@drawable/menu_button_shape"
+        android:textSize="30sp"
+        android:textColor="#ffffff"
+        android:text="Menu Item"
+        android:textAlignment="gravity"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp" />
+</LinearLayout>
