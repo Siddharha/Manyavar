@@ -100,6 +100,15 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/imageView16"
+                    android:src="@drawable/search"
+                    android:layout_margin="10dp"
+                    android:onClick="onClickSearch"
+                    android:layout_weight="0"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/imgHome"
                     android:src="@drawable/home_icon"
                     android:layout_margin="10dp"

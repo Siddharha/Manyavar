@@ -139,7 +139,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements Recycle
             final File file = new File(dir, VidfileName);
             if (file.exists()) {
                 //installUpdate(file);
-                playVideo(dir.getAbsolutePath() + "/" +VidfileName);
+                playVideo(dir.getAbsolutePath() + "/" + VidfileName);
                 //Toast.makeText(getBaseContext(), "Video File Exist.", Toast.LENGTH_LONG).show();
             } else {
 
@@ -186,7 +186,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements Recycle
     private void playVideo(String vidfilepath) {
 
         Intent i = new Intent(ProductDetailsActivity.this,ShowVideoActivity.class);
-        i.putExtra("Video_path",vidfilepath);
+        i.putExtra("Video_path", vidfilepath);
         startActivity(i);
     }
     private void downloadUpdate(String vidUrl) {
@@ -196,7 +196,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements Recycle
         r.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE);
 
         //fileName = "app.apk";
-        r.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS+appDownloadPath, VidfileName);
+        r.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS + appDownloadPath, VidfileName);
 
         DownloadManager d = (DownloadManager)getSystemService(Context.DOWNLOAD_SERVICE);
         d.enqueue(r);
@@ -238,7 +238,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements Recycle
             _productItem.setImgUrl(dbAdapter.getItemImgsbyItemCode(s_id).get(v));
             productList.add(_productItem);
         }
-        Log.e("PRODUCT_LIST",String.valueOf(dbAdapter.getItemImgsbyItemCode(s_id)));
+        Log.e("PRODUCT_LIST", String.valueOf(dbAdapter.getItemImgsbyItemCode(s_id)));
         dbAdapter.close();
 
 
@@ -348,7 +348,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements Recycle
     public void onItemClick(View childView, int position) {
 
         Intent i = new Intent(this,FullImageActivity.class);
-        Log.e("CONTEXT:",childView.getParent().toString());
+        Log.e("CONTEXT:", childView.getParent().toString());
         if(childView.getParent().toString().contains("rvProductDetailse"))
         {
             i.putExtra("Img_url",productList.get(position).getImgUrl());
@@ -366,5 +366,12 @@ public class ProductDetailsActivity extends AppCompatActivity implements Recycle
     {
         Intent i = new Intent(this,FacebookActivity.class);
         startActivity(i);
+    }
+
+    public void onClickSearch(View view)
+    {
+        //Do Search....
+        Intent j  = new Intent(getBaseContext(),SearchActivity.class);
+        startActivity(j);
     }
 }

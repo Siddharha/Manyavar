@@ -407,7 +407,7 @@ public class ProductStoreActivity extends AppCompatActivity implements RecyclerI
             }catch (OutOfMemoryError outOfMemoryError)
             {
 
-               Toast.makeText(getBaseContext(),"OutOf Memory Exception!",Toast.LENGTH_LONG).show();
+              // Toast.makeText(getBaseContext(),"OutOf Memory Exception!",Toast.LENGTH_LONG).show();
             }
             //imgContainer.background
 
@@ -527,7 +527,7 @@ public class ProductStoreActivity extends AppCompatActivity implements RecyclerI
                 if (b != null) {
                     holder.imgProduct.setImageBitmap(b);
                 } else {
-                    Toast.makeText(getBaseContext(), "File Not Found!", Toast.LENGTH_LONG).show();
+                  //  Toast.makeText(getBaseContext(), "File Not Found!", Toast.LENGTH_LONG).show();
                     holder.imgProduct.setImageResource(R.drawable.imagenotavailable);
 
                 }
@@ -537,7 +537,7 @@ public class ProductStoreActivity extends AppCompatActivity implements RecyclerI
             }
             catch (OutOfMemoryError outOfMemoryError)
             {
-                Toast.makeText(getBaseContext(),"Out Of Memory!",Toast.LENGTH_LONG).show();
+               // Toast.makeText(getBaseContext(),"Out Of Memory!",Toast.LENGTH_LONG).show();
             }
 
 
